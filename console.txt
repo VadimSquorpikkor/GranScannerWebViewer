@@ -1,0 +1,43 @@
+cd D:\GitHub\GranScannerWebViewer
+
+
+//use npm
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAObWktzNvONQwOL9TPtD6YBmbOboP56XI",
+  authDomain: "granscanner.firebaseapp.com",
+  projectId: "granscanner",
+  storageBucket: "granscanner.appspot.com",
+  messagingSenderId: "729700834614",
+  appId: "1:729700834614:web:d763f988359ed554b1a797"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+//use a <script> tag
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAObWktzNvONQwOL9TPtD6YBmbOboP56XI",
+    authDomain: "granscanner.firebaseapp.com",
+    projectId: "granscanner",
+    storageBucket: "granscanner.appspot.com",
+    messagingSenderId: "729700834614",
+    appId: "1:729700834614:web:d763f988359ed554b1a797"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
