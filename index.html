@@ -9,8 +9,7 @@
 <!--  <script defer src="/__/firebase/8.2.9/firebase-firestore.js"></script>-->
 <!--  <script defer src="/__/firebase/init.js?useEmulator=true"></script>-->
 
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,17 +23,39 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="public/css/normalize.css">
+  <link rel="stylesheet" href="public/css/main.css">
 
   <meta name="theme-color" content="#fafafa">
+  <script src="public/js/main.js"></script>
 </head>
 
 <body>
 
   <p>GranScannerWebViewer</p>
-  <script src="js/main.js"></script>
 
+
+
+
+  <script src="public/js/main.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAObWktzNvONQwOL9TPtD6YBmbOboP56XI",
+      authDomain: "granscanner.firebaseapp.com",
+      projectId: "granscanner",
+      storageBucket: "granscanner.appspot.com",
+      messagingSenderId: "729700834614",
+      appId: "1:729700834614:web:d763f988359ed554b1a797",
+      measurementId: "G-MEWVWFWH9G"
+    };
+  // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 
 
 
