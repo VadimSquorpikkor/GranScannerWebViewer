@@ -6,7 +6,6 @@ html, body {
   min-height: 100%;
   color: white;
 }
-
 table {
   margin: auto;
   text-align: center;
@@ -17,7 +16,26 @@ table {
 td {
   padding-left: 20px;
   padding-right: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   /*width: 100px;*/
+}
+.dr_cps {
+  font-size: 23px;
+}
+.date {
+  width: 150px;
+  font-size: 12px;
+}
+.num {
+  color: #ffa100;
+  width: 75px;
+  /*font-size: 11px;*/
+}
+
+.no_padding {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
