@@ -1,0 +1,23 @@
+html, body {
+  font-family: Arial;
+  text-align: center;
+  background-color: #444444;
+  margin:0px;
+  min-height: 100%;
+  color: white;
+}
+
+table {
+  margin: auto;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 13px;
+}
+td {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  /*width: 100px;*/
+}

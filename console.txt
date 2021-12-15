@@ -1,4 +1,5 @@
 cd D:\GitHub\GranScannerWebViewer
+firebase deploy
 
 
 //use npm
