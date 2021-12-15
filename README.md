@@ -1,5 +1,6 @@
-# GranScannerWebViewer 1.1
+# GranScannerWebViewer 1.03
 ###
 
 [Список версий](./VERSION.md)
 
+![alt tag](bg.jpg)
