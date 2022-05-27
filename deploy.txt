@@ -1,0 +1,5 @@
+аккаунт: Atomtex Android
+         atomtexapps@gmail.com
+
+cd D:\GitHub\GranScannerWebViewer
+firebase deploy
