@@ -1,14 +1,16 @@
 class Meas {
-  constructor(gain_code, peak, date) {
+  constructor(gain_code, peak, date, result) {
     this.gain_code = gain_code;
     this.peak = peak;
     this.date = date;
+    this.result = result;
   }
 
   toString() {
     return this.gain_code + ', ' +
       this.peak + ', ' +
-      this.date;
+      this.date + ', ' +
+      this.result;
   }
 }
 
@@ -17,12 +19,13 @@ let measConverter = {
     return {
       gain_code: meas.gain_code,
       peak: meas.peak,
-      date: meas.date
+      date: meas.date,
+      result: meas.result
     };
   },
   fromFirestore: function (snapshot, options) {
     const data = snapshot.data(options);
-    return new Meas(data.gain_code, data.peak, data.date);
+    return new Meas(data.gain_code, data.peak, data.date, data.result);
   }
 };
 
