@@ -1,16 +1,22 @@
 class Meas {
-  constructor(gain_code, peak, date, result) {
+  constructor(gain_code, peak, date, result, temperature, stabPosition, averagePosition) {
     this.gain_code = gain_code;
     this.peak = peak;
     this.date = date;
     this.result = result;
+    this.temperature = temperature;
+    this.stabPosition = stabPosition;
+    this.averagePosition = averagePosition;
   }
 
   toString() {
     return this.gain_code + ', ' +
       this.peak + ', ' +
       this.date + ', ' +
-      this.result;
+      this.result + ', ' +
+      this.temperature + ', ' +
+      this.stabPosition + ', ' +
+      this.averagePosition;
   }
 }
 
@@ -20,12 +26,15 @@ let measConverter = {
       gain_code: meas.gain_code,
       peak: meas.peak,
       date: meas.date,
-      result: meas.result
+      result: meas.result,
+      temperature: meas.temperature,
+      stab_position: meas.stabPosition,
+      average_position: meas.averagePosition
     };
   },
   fromFirestore: function (snapshot, options) {
     const data = snapshot.data(options);
-    return new Meas(data.gain_code, data.peak, data.date, data.result);
+    return new Meas(data.gain_code, data.peak, data.date, data.result, data.temperature, data.stab_position, data.average_position);
   }
 };
 

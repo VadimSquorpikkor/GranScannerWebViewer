@@ -1,4 +1,4 @@
-# GranScannerWebViewer 1.03
+# GranScannerWebViewer 1.06
 ###
 
 [Список версий](./VERSION.md)

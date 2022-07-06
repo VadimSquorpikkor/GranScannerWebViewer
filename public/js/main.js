@@ -34,6 +34,22 @@ function getTimePassed(time) {
   return min+sec;
 }
 
+function insertNothing(target) {
+  if (document.getElementById(target) != null) {
+    document.getElementById(target).innerHTML = '<table>' +
+      '<tr>' +
+      '  <td>№ Изм.</td>' +
+      '  <td>Дата</td>' +
+      '  <td>Время между изм. (с)</td>' +
+      '  <td>Температура</td>' +
+      '  <td>Код усиления</td>' +
+      '  <td>Позиция пика / среднее</td>' +
+      '  <td>Стаб. позиция</td>' +
+      '</tr>' +
+      '</table>';
+  }
+}
+
 function addData(arr) {
   if (arr.length === 0) insertNothing('row_table');
   else if (document.getElementById('row_table') != null) {
@@ -48,8 +64,10 @@ function addData(arr) {
         '  <td>№ Изм.</td>'+
         '  <td>Дата</td>'+
         '  <td>Время между изм. (с)</td>'+
+        '  <td>Температура</td>'+
         '  <td>Код усиления</td>'+
-        '  <td>Позиция пика</td>'+
+        '  <td>Позиция пика / среднее</td>'+
+        '  <td>Стаб. позиция</td>'+
         '</tr>';
 
     for (let i = arr.length-1; i >=0 ; i--) {
@@ -64,14 +82,19 @@ function addData(arr) {
       let timePassed = getTimePassed(timeLast - meas.date);
       timeLast = meas.date;
       let peakIsOk = meas.result===0?'':'<span style="color: #33ff33"> OK</span>';
+      let temperature = (meas.temperature).toFixed(1);
+      let stabPosition = meas.stabPosition;
+      let averagePosition = (meas.averagePosition).toFixed(1);
 
       data +=
       '<tr>'+
       '  <td class="num">'+i+'</td>'+
       '  <td class="date">'+date+'</td>'+
       '  <td class="date">'+timePassed+'</td>'+
+      '  <td>'+temperature+'</td>'+
       '  <td>'+gainCode+'</td>'+
-      '  <td>'+peak + peakIsOk+'</td>'+
+      '  <td>'+peak + ' / ' + averagePosition + peakIsOk+'</td>'+
+      '  <td>'+stabPosition+'</td>'+
       '</tr>';
     }
 
@@ -79,6 +102,8 @@ function addData(arr) {
   }
   console.log(arr.length);
 }
+
+
 
 listen_new(measConverter, addData);
 listen_cps(drCpsConverter, addDrCps);
