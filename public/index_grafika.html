@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GranScannerWebViewer</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!--  <script defer src="/__/firebase/8.5.0/firebase-app.js"></script>-->
+<!--  <script defer src="/__/firebase/8.5.0/firebase-firestore.js"></script>-->
+<!--  <script defer src="/__/firebase/init.js?useEmulator=true"></script>-->
+
+<!--  <script defer src="js/entities.js"></script>-->
+<!--  <script defer src="js/main.js"></script>-->
+
+</head>
+
+<body>
+
+<div class="main_div" id="main_div">
+
+  <table>
+    <tr>
+      <td class="no_padding"><img src="img/granscanner2.png" width="50"></td>
+<!--      <td><h1>GRANSCANNER WEB VIEWER</h1></td>-->
+    </tr>
+  </table>
+
+<!--  <p>Version 1.06</p>-->
+
+
+  <canvas id="target" style="height: 200px; width: 100%; position: relative; background-color: #888888"></canvas>
+
+
+  <table>
+    <tr>
+      <td><span class="dr_cps" id="dr">- - -</span> мкЗв/ч</td>
+      <td><span class="dr_cps" id="cps">- - -</span> имп/с</td>
+    </tr>
+  </table><br>
+
+  <div class="main_div" id="row_table" style="box-shadow: none; padding-top: 0px"></div>
+
+  <script defer src="js/grafika.js"></script>
+</div>
+</body>
+
+
+</html>
