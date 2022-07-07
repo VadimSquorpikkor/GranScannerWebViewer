@@ -43,7 +43,7 @@ function insertNothing(target) {
       '  <td>Время между изм. (с)</td>' +
       '  <td>Температура</td>' +
       '  <td>Код усиления</td>' +
-      '  <td>Позиция пика / среднее</td>' +
+      '  <td>Позиция пика</td>' +
       '  <td>Стаб. позиция</td>' +
       '</tr>' +
       '</table>';
@@ -93,7 +93,7 @@ function addData(arr) {
       '  <td class="date">'+timePassed+'</td>'+
       '  <td>'+temperature+'</td>'+
       '  <td>'+gainCode+'</td>'+
-      '  <td>'+peak + ' / ' + averagePosition + peakIsOk+'</td>'+
+      '  <td>'+peak + /*' / ' + averagePosition +*/ peakIsOk+'</td>'+
       '  <td>'+stabPosition+'</td>'+
       '</tr>';
     }
@@ -104,6 +104,16 @@ function addData(arr) {
 }
 
 
+function addNewData(arr) {
+  addData(arr);
 
-listen_new(measConverter, addData);
+  let gArr = [arr.length];
+  for (let i = 0; i < arr.length; i++) {
+    gArr[i] = arr[i].peak;
+  }
+  addGData(gArr);
+}
+
+// listen_new(measConverter, addData);
+listen_new(measConverter, addNewData);
 listen_cps(drCpsConverter, addDrCps);

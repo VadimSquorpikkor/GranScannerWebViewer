@@ -39,3 +39,21 @@ td {
   margin-left: 0px;
   margin-right: 0px;
 }
+
+p {
+  font-size: 11px;
+  margin: 0;
+}
+
+canvas {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  background-color: #666666;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.canvas_div {
+  padding: 20px;
+}
