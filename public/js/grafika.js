@@ -6,6 +6,7 @@ const COLOR_GRAY = '#999999';
 const LINE_WIDTH = 2;
 const STEP = 4;
 const HEIGHT = 150;
+const SPACE = 0.1;
 
 class gLine {
   ctx;
@@ -38,9 +39,9 @@ class gLine {
       if (arr[i]<this.minY) this.minY = arr[i];
     }
 
-    //добавить 20% расстояние между краем поля и максимумом/минимумом графика
-    this.minY = this.minY-(this.minY*0.2);
-    this.maxY = this.maxY+(this.maxY*0.2);
+    //добавить 10% расстояние между краем поля и максимумом/минимумом графика
+    this.minY = this.minY-(this.minY*SPACE);
+    this.maxY = this.maxY+(this.maxY*SPACE);
 
     console.log('maxY='+this.maxY+' minY='+this.minY);
     console.log('height/(maxY - minY) ='+HEIGHT/(this.maxY - this.minY));
